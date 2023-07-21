@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library_admin</title>
+</head>
+<body>
+  
+<h1>Admin login</h1>
+      <br>
+      <form action="/admin_signin" method="post">
+        <input type="text" placeholder="Admin_username" name="Admin_username" required><br><br>
+        <input type="password" placeholder="Password" name="password" required><br><br>
+        <input class="btn btn-default" type="submit" value="Login">
+
+        {% for mesg in get_flashed_messages() %}
+        <p>{{ mesg }}</p>
+        {% endfor %}
+      </form>
+</body>
+</html>
